@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're confirmed — Jovan</title>
+  <meta name="description" content="Your guide is on its way. Check your inbox." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#1F3D36',
+            sand: '#F6F3EE',
+            gold: '#C89A3D'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          },
+          boxShadow: {
+            soft: '0 18px 50px rgba(31, 61, 54, 0.08)',
+            glow: '0 0 0 1px rgba(200, 154, 61, 0.16), 0 18px 50px rgba(31, 61, 54, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(31,61,54,0.05), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(200,154,61,0.07), transparent 28%),
+        #F6F3EE;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(22px);
+      animation: fadeUp 900ms ease-out forwards;
+    }
+    .fade-in-delay {
+      opacity: 0;
+      transform: translateY(22px);
+      animation: fadeUp 900ms ease-out 300ms forwards;
+    }
+    .fade-in-delay-2 {
+      opacity: 0;
+      transform: translateY(22px);
+      animation: fadeUp 900ms ease-out 550ms forwards;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .soft-divider {
+      background: linear-gradient(90deg, rgba(31,61,54,0), rgba(31,61,54,0.28), rgba(200,154,61,0.55), rgba(31,61,54,0.18), rgba(31,61,54,0));
+    }
+  </style>
+</head>
+<body class="font-sans text-forest antialiased min-h-screen flex flex-col">
+
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-30 border-b border-forest/10 bg-sand/95 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-8 lg:px-12">
+      <a href="/" class="font-serif text-lg tracking-[0.35em] text-forest/85">
+        JOVAN
+      </a>
+      <nav class="hidden items-center gap-10 text-sm font-medium text-forest/70 sm:flex">
+        <a href="/#about" class="hover:text-forest transition">About</a>
+        <a href="/#coaching" class="hover:text-forest transition">Coaching</a>
+        <a href="/#lab" class="hover:text-forest transition">The Lab</a>
+      </nav>
+      <a
+        href="https://scheduler.zoom.us/jovan-medrano"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hidden items-center justify-center rounded-full bg-gold px-5 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-white shadow-glow transition hover:-translate-y-0.5 hover:opacity-95 sm:inline-flex"
+      >
+        Book a Clarity Call
+      </a>
+      <a
+        href="https://scheduler.zoom.us/jovan-medrano"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center rounded-full bg-gold px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-white shadow-glow transition hover:opacity-95 sm:hidden"
+      >
+        Call
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 flex items-center justify-center px-6 py-24 sm:px-8 lg:px-12">
+    <div class="mx-auto max-w-2xl w-full text-center">
+
+      <!-- Gold accent line -->
+      <div class="fade-in flex justify-center mb-10">
+        <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-3 w-48">
+          <div class="h-px bg-gradient-to-r from-transparent via-forest/20 to-forest/25"></div>
+          <div class="flex h-8 w-8 items-center justify-center rounded-full border border-gold/35 bg-white text-gold text-xs shadow-soft">
+            ✓
+          </div>
+          <div class="h-px bg-gradient-to-r from-gold via-gold/55 to-transparent"></div>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="fade-in-delay rounded-[2rem] border border-forest/10 bg-white/65 p-10 shadow-soft backdrop-blur-sm sm:p-14">
+
+        <p class="text-sm uppercase tracking-[0.3em] text-forest/50 mb-5">
+          You're confirmed
+        </p>
+
+        <h1 class="font-serif text-4xl leading-tight text-forest sm:text-5xl mb-6">
+          Your guide is on its way.
+        </h1>
+
+        <div class="soft-divider h-px w-full mb-8 opacity-70"></div>
+
+        <p class="text-lg leading-8 text-forest/72 mb-4">
+          Check your inbox — <em>The Self-Help Loop Exit Strategy</em> will arrive shortly.
+        </p>
+        <p class="text-[15px] leading-7 text-forest/58 mb-10">
+          While you wait, consider this: the fact that you're here means you already know something has to change. The guide will help you name exactly what that is.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <a
+            href="https://scheduler.zoom.us/jovan-medrano"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center rounded-full bg-gold px-7 py-3.5 text-sm font-medium text-white shadow-glow transition hover:-translate-y-0.5 hover:opacity-95"
+          >
+            Book a Clarity Call
+          </a>
+          <a
+            href="/"
+            class="inline-flex items-center justify-center rounded-full border border-forest/20 bg-transparent px-7 py-3.5 text-sm font-medium text-forest/90 transition hover:border-forest/35 hover:bg-white/40"
+          >
+            Return to the site
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Sign-off -->
+      <div class="fade-in-delay-2 mt-10">
+        <p class="font-serif text-base text-forest/45 italic">— Jovan</p>
+        <p class="mt-2 text-[11px] uppercase tracking-[0.25em] text-forest/30">
+          Irrevocable Truth Framework™
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-forest pt-16 pb-8 text-center">
+    <div class="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 sm:px-8 lg:px-12">
+      <p class="font-serif text-xl text-sand/80">
+        Stop Living an Expired Life.
+      </p>
+      <nav class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs font-medium tracking-[0.18em] uppercase text-sand/50">
+        <a href="/#about" class="hover:text-sand transition">About</a>
+        <a href="/#coaching" class="hover:text-sand transition">Coaching</a>
+        <a href="/#lab" class="hover:text-sand transition">Integration Lab</a>
+        <a href="/#resources" class="hover:text-sand transition">Resources</a>
+        <a href="/#contact" class="hover:text-sand transition">Contact</a>
+      </nav>
+      <p class="text-[11px] text-sand/35">
+        © 2026 Jovan. Created for those ready to embody their truth.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
